@@ -38,7 +38,7 @@ const SignupForm = () => {
         return toast({ title: 'Sign up failed. Please try again.'})
       }
 
-      // const session = await signInAccount()
+      const session = await signInAccount()
       
   }
 
