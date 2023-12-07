@@ -1,6 +1,4 @@
-// import { User } from './../../../node_modules/appwrite/src/models';
 import { ID } from 'appwrite';
-
 import { INewUser } from "@/types";
 import { account, appwriteConfig, avatars, databases } from './config';
 

@@ -9,14 +9,14 @@ import { SignupValidation } from "@/lib/validation";
 import {z} from "zod";
 import Loader from "@/components/shared/Loader";
 import { Link } from "react-router-dom";
-import { useCreateUserAccountMutation } from "@/lib/react-query/queriesAndMutations";
+import { useCreateUserAccount } from "@/lib/react-query/queriesAndMutations";
 
 
 const SignupForm = () => {
   const { toast } = useToast()
 
       const {mutateAsync: createUserAccount, isLoading: 
-      isCreatingUser } = useCreateUserAccountMutation();
+      isCreatingUser } = useCreateUserAccount();
 
 
     // 1. Define your form.
