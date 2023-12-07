@@ -9,7 +9,7 @@ import { SignupValidation } from "@/lib/validation";
 import {z} from "zod";
 import Loader from "@/components/shared/Loader";
 import { Link } from "react-router-dom";
-import { useCreateUserAccount } from "@/lib/react-query/queriesAndMutations";
+import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations";
 
 
 const SignupForm = () => {
@@ -17,7 +17,7 @@ const SignupForm = () => {
 
       const {mutateAsync: createUserAccount, isLoading: 
       isCreatingUser } = useCreateUserAccount();
-
+      const {mutateAsync: signInAccount, isLoading: isSigningIn } = useSignInAccount();
 
     // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
